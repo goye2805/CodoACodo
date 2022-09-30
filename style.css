@@ -176,17 +176,17 @@ nav a {
 }
 
 #slide-1 {
-    background-image: url(https://imageup.me/ba1);
+    background-image: url(https://i.ibb.co/KXwb6W1/ba1.jpg);
 }
 
 #slide-2 {
     animation-delay: 15s;
-    background-image: url(./img/ba2.jpg);
+    background-image: url(https://i.ibb.co/m6vr5Vr/ba2.jpg);
 }
 
 #slide-3 {
     animation-delay: 30s;
-    background-image: url(./img/ba3.jpg);
+    background-image: url(https://i.ibb.co/dKRVcwy/ba3.jpg);
 }
 
 @keyframes slider-animation {
