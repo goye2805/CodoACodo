@@ -1,0 +1,511 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica;
+}
+
+#barra_navegacion {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: rgb(70, 68, 68);
+    z-index: 1;
+}
+
+#logo {
+    width: 8em;
+    height: 4em;
+}
+
+#logo img {
+    width: 8em;
+    height: 4em;
+    padding: 0 0 0 2em;
+}
+
+#titulo_barra h2 {
+    text-align: start;
+    color: #FFFF;
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li {
+    text-align: center;
+    float: left;
+    margin: 0;
+    padding: 0.5em;
+}
+
+#menu ul a {
+    display: block;
+    text-align: center;
+    color: rgb(146, 142, 142);
+    text-decoration: none;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#menu ul span {
+    color: rgb(11, 242, 7);
+    text-shadow: 0px 5px 10px rgb(5, 117, 3);
+}
+
+#menu ul li:hover {
+    background: #def7ff;
+    border-radius: 0.5em;
+}
+
+#menu a:active {
+    color: #ffff;
+    background: rgba(174, 172, 172, 0.151);
+    border-radius: 0.5em;
+}
+
+#menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #FFFF00;
+    padding: 0;
+}
+
+#menu ul li:hover>ul {
+    display: block;
+}
+
+nav a {
+    padding: 0.5em 1em 1em 1em;
+    text-shadow: 5px 10px 10px #000;
+}
+
+#seccion1 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+}
+
+/****** Texto Seccion 1 ***** */
+
+.seccion_1_titulo {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    font-size: 2em;
+    color: #ffff;
+    text-shadow: 5px 10px 10px #000;
+    animation-duration: 6s;
+    animation-name: slidein;
+}
+
+.seccion_1_parrafo {
+    width: 40%;
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    font-size: 1.2em;
+    color: #ffff;
+    text-align: right;
+    text-shadow: 5px 10px 10px #000;
+}
+
+.seccion1_boton {
+    display: flex;
+    cursor: pointer;
+}
+
+.seccion1_boton .boton1 {
+    position: absolute;
+    top: 75%;
+    right: 25%;
+    color: #ffff;
+    background: none;
+    border: 2px solid #ffff;
+    border-radius: 0.5em;
+    margin: 1em 0 0 0;
+    padding: 0.5em 1em;
+    box-shadow: 5px 10px 10px #000;
+}
+
+.seccion1_boton .boton2 {
+    position: absolute;
+    top: 75%;
+    right: 10%;
+    color: #ffff;
+    background: rgb(116, 244, 5);
+    border: 2px solid #ffff;
+    border-radius: 0.5em;
+    margin: 1em 0 0 0;
+    padding: 0.5em 1em;
+    box-shadow: 5px 10px 10px #000;
+}
+
+.slider-wrap {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.single-slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    animation: slider-animation;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    background-size: cover;
+}
+
+#slide-1 {
+    background-image: url(./img/ba1.jpg);
+}
+
+#slide-2 {
+    animation-delay: 15s;
+    background-image: url(./img/ba2.jpg);
+}
+
+#slide-3 {
+    animation-delay: 30s;
+    background-image: url(./img/ba3.jpg);
+}
+
+@keyframes slider-animation {
+
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+
+#seccion2 {
+    width: 100%;
+    height: 100vh;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgb(245, 241, 241);
+}
+
+.seccion_2_titulo1 {
+    font-size: 2em;
+    padding: 5em 0 0 0;
+    text-shadow: 0px 5px 10px #000;
+}
+
+.seccion_2_titulo2 h1 {
+    font-size: 3em;
+    margin-top: 0.125em;
+    text-shadow: 0px 5px 10px #000;
+    animation: 3s slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.container {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+.card {
+    width: 300px;
+    height: 35em;
+    margin: 10px;
+    background-color: #ffff;
+    border-radius: 1em;
+    margin-top: 2em;
+    align-items: center;
+    box-shadow: 5px 10px 10px #000;
+    transition: transform .2s;
+    /* Animation */
+}
+
+.card:hover {
+    transform: scale(1.2);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.card_img img {
+    width: 100%;
+    align-items: center;
+    border-radius: 1em 1em 0 0;
+}
+
+.card_body h4 {
+    text-align: left;
+    padding: 0.5em 0 0 0.7em;
+    /*text-decoration: ;*/
+    text-decoration-color: #FFDB58;
+}
+
+mark1 {
+    background: #ffdf6d;
+    padding: 0.3em;
+    border-radius: 0.5em;
+}
+
+mark2 {
+    background: #05F6E8;
+    color: #ffff;
+    padding: 0.3em;
+    border-radius: 0.5em;
+}
+
+mark3 {
+    background: #5A5D5D;
+    color: #ffff;
+    padding: 0.3em;
+    border-radius: 0.5em;
+}
+
+mark4 {
+    background: #F70808;
+    color: #ffff;
+    padding: 0.3em;
+    border-radius: 0.5em;
+}
+
+.card_body span {
+
+    padding: 0 0 0 0.8em;
+}
+
+.card_body h1 {
+    text-align: left;
+    padding: 0 0.5em;
+}
+
+.card_body p {
+    font-size: 0.83em;
+    text-align: justify;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+
+#seccion3 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: rgb(211, 246, 147);
+}
+
+.seccion3_izquierda {
+    width: 50%;
+    height: 100vh;
+}
+
+.seccion3_izquierda img {
+    width: 100%;
+    height: 100vh;
+}
+
+.seccion3_derecha {
+    width: 50%;
+    height: 100vh;
+    background: rgb(59, 58, 58);
+    padding: 10em 2em;
+}
+
+.seccion3_derecha_titulo h1 {
+    color: #ffff;
+}
+
+.seccion3_derecha_parrafo {
+    text-align: justify;
+    color: #ffff;
+}
+
+.seccion3_derecha_boton button {
+    color: #ffff;
+    background: none;
+    cursor: pointer;
+    border: 1px solid #ffff;
+    border-radius: 0.5em;
+    margin: 1em 0 0 0;
+    padding: 0.5em 1em;
+}
+
+
+#seccion4 {
+    width: 100%;
+    height: 100vh;
+    background: #FEFEFE;
+}
+
+.form {
+    width: 100%;
+    height: 90vh;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    /*border:*/
+}
+
+.form p {
+    text-align: left;
+    padding: 0.5em 0 0.5em 41em;
+}
+
+.encabezado_F {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.encabezado_F p {
+    padding: 1em 0;
+}
+
+.encabezado_F span1 {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: #000;
+}
+
+.seccion_4_titulo1 {
+    font-size: 1.5em;
+    padding: 5em 0 0 0;
+    text-shadow: 0px 5px 10px #000;
+    margin-top: 2em;
+}
+
+.seccion_4_titulo2 {
+    font-size: 2em;
+    margin-top: 0.125em;
+    text-shadow: 0px 5px 10px #000;
+    padding: 0 0 1em 0;
+}
+
+.body_form input {
+    margin: 0.5em;
+    padding: 0.2em;
+}
+
+.caja textarea {
+    margin: 0.5em;
+    padding: 0.5em;
+    font-family: Helvetica;
+}
+
+.submit input {
+    font-size: 1.2em;
+    color: #ffff;
+    background: #33F708;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    margin: 0.5em;
+    padding: 0.4em;
+    box-shadow: 0px 5px 10px #000;
+}
+
+#menu_footer {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #01125D;
+    font-size: 1.5em;
+    color: #ffff;
+}
+
+#menu_footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu_footer ul li {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0.5em;
+}
+
+#menu_footer ul a {
+    display: block;
+    text-align: center;
+    color: rgb(146, 142, 142);
+    text-decoration: none;
+    font-size: 0.7em;
+    margin: 1em 0 0 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5em;
+    text-shadow: 5px 10px 10px #000;
+}
+
+/* *********   Responsive   ********** */
+
+@media screen and (max-width: 1024px) {
+
+    .seccion_2_titulo1 {
+        font-size: 2em;
+        padding: 4em 0 0 0;
+        text-shadow: 0px 5px 10px #000;
+    }
+
+    .encabezado_F p {
+        padding: 1em 0;
+    }
+
+    .form p {
+        text-align: left;
+        padding: 0.5em 0 0.5em 13em;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width:1023px) {
+
+    .seccion1_boton .boton1 {
+        right: 40%;
+    }
+
+}
